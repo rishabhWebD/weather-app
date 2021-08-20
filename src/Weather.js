@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from "react";
-import './styles.css'
+import './styles.css';
+
 
 
 const Weather = ()=>{
@@ -23,18 +24,22 @@ const Weather = ()=>{
     <>
          <div className="container">
               <div className="search">
+              
               <h1>Know The Temp Here </h1>
                  <input type="search" className="inp" onChange={(event)=>{setSearch(event.target.value)}}/>
+                 
                  {
             !city?(
                 <h1>Enter Valid City </h1>
             ):(
                 <div>
                     <h1>{search}</h1>
-                    <h1>{city.temp} degree celcius</h1>
+                    <h1>{city.temp}°C</h1><i className="fas fa-bolt"></i>
+                   
                 </div>
             )
         }
+        
             
         </div>
        
